@@ -1,4 +1,5 @@
 import './Timer.css'
+
 const Timer = () => {
     return(
         <div className='Timer'>
