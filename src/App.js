@@ -1,17 +1,20 @@
+import './App.css';
 import Letter from './letter/Letter'
 import Timer from './timer/Timer';
 import Categories from './categories/Categories';
-import './App.css';
+import { useState } from 'react';
 
 function App() {
+  const [hide, setHide] = useState(true);
+
   return (
     <div className="App">
       <div className='App-Section-One'>
         <Letter />
-        <Timer />
+        <Timer setHide={setHide}/>
       </div>
       <div className='App-Section-Two'>
-        <Categories />
+        <Categories hide={hide} setHide={setHide}/>
       </div>
     </div>
   );
